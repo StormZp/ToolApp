@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:id="@+id/title_lay"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back"
+            app:layout_widthPercent="10%w"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/azure"
+            android:textSize="@dimen/dp24"/>
+
+        <TextView
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="123"
+            android:textSize="@dimen/sp11"
+            android:visibility="gone"
+            app:layout_marginRightPercent="2%"/>
+
+
+        <TextView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/menu_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary"
+            android:scaleType="center"
+            android:src="@mipmap/add_card"
+            android:visibility="invisible"
+            app:layout_widthPercent="10%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</layout>
