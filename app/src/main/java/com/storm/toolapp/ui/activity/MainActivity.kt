@@ -10,6 +10,7 @@ import com.storm.toolapp.base.BaseActivity
 import com.storm.toolapp.databinding.ActivityMainBinding
 import com.storm.toolapp.ui.fragment.BlankVlayoutFragment
 import com.storm.toolapp.ui.fragment.MainFragment
+import com.storm.toolapp.ui.fragment.MineFragment
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -29,7 +30,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             override fun getItem(position: Int): Fragment {
                 when (position) {
                     1 -> return BlankVlayoutFragment.newInstance("展示", "展示")
-                    2 -> return MainFragment.newInstance("中心", "中心")
+                    2 -> return MineFragment.newInstance("中心", "中心")
                 }
                 return MainFragment.newInstance("首页", "首页")
             }

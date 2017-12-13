@@ -35,6 +35,11 @@
         <item name="textsize3">@dimen/tset_big3</item>
     </style>
 
+    <style name="text_16_666666">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+
 
 
 </resources>
