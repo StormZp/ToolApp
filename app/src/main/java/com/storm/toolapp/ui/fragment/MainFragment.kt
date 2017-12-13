@@ -16,8 +16,8 @@ import com.storm.toolapp.databinding.FragmentMainBinding
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
     companion object {
-        private var ARG_PARAM1: String? = null
-        private var ARG_PARAM2: String? = null
+        private var ARG_PARAM1: String? = "param1"
+        private var ARG_PARAM2: String? = "param2"
         fun newInstance(param1: String, param2: String): MainFragment {
             val fragment = MainFragment()
             val args = Bundle()
@@ -49,6 +49,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     override fun initData() {
         binding.titlebar.title.text = mParam1
+        binding.titlebar.back.visibility = View.GONE
     }
 
     override fun initListener() {

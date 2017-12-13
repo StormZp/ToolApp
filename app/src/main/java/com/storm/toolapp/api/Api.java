@@ -23,6 +23,5 @@ public interface Api {
 //    Observable<UserInfoResponse> userInfo(@Query("act") String act, @Query("op") String op, @Query("key") String key);
 
 
-
 }
 
