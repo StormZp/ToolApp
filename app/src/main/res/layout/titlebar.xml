@@ -18,7 +18,7 @@
             android:background="@color/colorPrimary"
             android:padding="6dp"
             android:scaleType="centerInside"
-            android:src="@mipmap/back"
+            android:src="@mipmap/icon_back"
             app:layout_widthPercent="10%w"/>
 
         <TextView
@@ -27,8 +27,8 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text=""
-            android:textColor="@color/azure"
+            android:text="123"
+            android:textColor="@color/white"
             android:textSize="@dimen/dp24"/>
 
         <TextView

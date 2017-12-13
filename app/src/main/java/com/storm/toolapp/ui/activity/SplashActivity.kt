@@ -2,6 +2,7 @@ package com.storm.toolapp.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import com.storm.toolapp.R
@@ -13,7 +14,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initBinding(R.layout.activity_splash)
-
+        binding.activitySplash.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
     }
 
     override fun initData() {

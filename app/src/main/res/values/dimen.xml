@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--小字体-->
+    <dimen name="tset_small">12sp</dimen>
+    <dimen name="tset_middle">16sp</dimen>
+    <dimen name="tset_big">20sp</dimen>
+    <!--中字体-->
+    <dimen name="tset_small2">18sp</dimen>
+    <dimen name="tset_middle2">22sp</dimen>
+    <dimen name="tset_big2">26sp</dimen>
+    <!--大字体-->
+    <dimen name="tset_small3">22sp</dimen>
+    <dimen name="tset_middle3">26sp</dimen>
+    <dimen name="tset_big3">30sp</dimen>
+
+
+</resources>

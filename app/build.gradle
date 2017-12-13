@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.storm.toolapp"
         minSdkVersion 16
@@ -34,7 +34,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'//分包
     compile project(':tool')//工具包
@@ -49,7 +48,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 
-    kapt 'com.android.databinding:compiler:2.2.3'
+    kapt "com.android.databinding:compiler:2.3.0"
 
     //Vlayout布局
     compile('com.alibaba.android:vlayout:1.0.9@aar') {
@@ -64,4 +63,5 @@ dependencies {
 }
 repositories {
     mavenCentral()
+    google()
 }

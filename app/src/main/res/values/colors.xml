@@ -1,65 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">@color/skyblue</color><!--应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色-->
+    <color name="colorPrimaryDark">@color/skyblue</color><!--应用的主要暗色调 状态栏颜色也用这个-->
     <color name="colorAccent">#FF4081</color>
+    <!--4.windowBackground 窗口背景颜色-->
+    <color name="windowBackground">#efefef</color>
+    <!--5.navigationBarColor 底部栏颜色-->
+    <color name="navigationBarColor">@color/half_black</color>
+    <!--6.colorForeground 应用的前景色，ListView的分割线，switch滑动区默认使用该颜色-->
+    <!--7.colorBackground 应用的背景色，popMenu的背景默认使用该颜色-->
+    <!--8.colorAccent CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色-->
+    <!--9.colorControlNormal CheckBox，RadioButton，SwitchCompat等默认状态的颜色。-->
+    <!--10.colorControlHighlight 控件按压时的色调-->
+    <!--11.colorControlActivated 控件选中时的颜色，默认使用colorAccent-->
+    <!--12.colorButtonNormal 默认按钮的背景颜色-->
+    <!--13.editTextColor：默认EditView输入框字体的颜色。-->
+    <!--14.textColor Button，textView的文字颜色-->
+    <!--15.textColorPrimaryDisableOnly RadioButton checkbox等控件的文字-->
+    <!--16.textColorPrimary 应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
+    <!--17.colorSwitchThumbNormal: switch thumbs 默认状态的颜色. (switch off)-->
 
 
-    <color name="default_background_color">#F1F1F1</color>
-    <color name="dark">#FF222222</color>
-    <color name="light">#FFEEEEEE</color>
 
-    <!-- base color -->
-    <color name="full_black">#000000</color>
-    <color name="light_white">#f9f9f9</color>
-    <color name="textcolor_gray">#7a7a7a</color>
-    <color name="textcolor_black">#1D1D1D</color>
-    <color name="textcolor_orange">#EC6000</color>
-    <color name="textcolor_blue">#00BAED</color>
-    <color name="main_rg_text_color">#00AFF1</color>
-    <color name="gray_line">#DBDBDB</color>
-    <color name="ashen_while">#F7F7F7</color>
-    <color name="text_color_red">#ff0000</color>
-    <color name="login_btn_bg">#008FCE</color>
-    <color name="light_drak">#BDBDBD</color>
-
-
-    <color name="statusbar_bg">#00AFF1</color>
-
-    <color name="drak_orange">#EB8949</color>
-    <color name="head_bg_color">#087CF5</color>
-    <color name="listview_item_normal">#eef0ed</color>
-    <color name="listview_item_pressed">#d4d4d4</color>
-    <color name="tc_gray">#BDBDBD</color>
-
-    <color name="result_view">#b0000000</color>
-    <color name="viewfinder_mask">#60000000</color>
-    <color name="possible_result_points">#c0ffff00</color>
-    <!--new color-->
-    <color name="bg_top_bar">#50AEF4</color>
-    <color name="bg_paint_activity">#EFEFF4</color>
-    <color name="bg_paint">#F6F6F6</color>
-    <color name="line_grey">#DBDBDB</color>
-    <!--画笔颜色 color-->
-    <color name="pen_color_zh">#650065</color>
-    <color name="pen_color_grey">#A3A3A3</color>
-    <color name="pen_color_purple">#BC6AFC</color>
-    <color name="pen_color_red">#F93333</color>
-    <color name="pen_color_orange">#FF9249</color>
-    <color name="pen_color_yellow">#FFF449</color>
-    <color name="pen_color_green">#44ED5C</color>
-    <color name="pen_color_blue">#6AC0FC</color>
-    <color name="pen_color_violet">#6A74FC</color>
-    <color name="panel_bg">#000000</color>
-    <color name="panel_bg_pressed">#222222</color>
-    <color name="paint_color_blue">#41c6ff</color>
-    <color name="paint_color_red">#ff4141</color>
-    <color name="paint_color_red2">#4cff4141</color>
-    <color name="paint_color_blue2">#4c41c6ff</color>
-    <color name="paint_color_yellow">#f4ea2a</color>
-    <color name="paint_color_yellow2">#4cf4ea2a</color>
-    <color name="white2">#4cffffff</color>
-
-    <!--批注对话框背景色color-->
-    <color name="note_frame_bg">#50aef4</color>
 </resources>
