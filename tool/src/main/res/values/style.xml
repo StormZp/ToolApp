@@ -22,4 +22,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>   <!--设置Activity出现方式-->
         <item name="android:backgroundDimEnabled">true</item>       <!-- 背景是否模糊显示-->
     </style>
+
+    <style name="popmenu_anim_style">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
 </resources>

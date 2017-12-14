@@ -1,14 +1,15 @@
 package com.storm.toolapp.ui.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.storm.tool.utils.AppUtil
+import com.storm.tool.view.MyPopupWindow
 import com.storm.toolapp.R
 import com.storm.toolapp.base.BaseFragment
 import com.storm.toolapp.databinding.FragmentMineBinding
-import com.storm.toolapp.dialog.MyBlankDialog
 
 /**
  * Created Storm
@@ -17,6 +18,9 @@ import com.storm.toolapp.dialog.MyBlankDialog
  */
 
 class MineFragment : BaseFragment<FragmentMineBinding>() {
+    private var list = arrayListOf<String>()
+    private var menu: MyPopupWindow? = null
+
     companion object {
         private var ARG_PARAM1: String? = "param1"
         private var ARG_PARAM2: String? = "param2"
@@ -52,11 +56,27 @@ class MineFragment : BaseFragment<FragmentMineBinding>() {
     override fun initData() {
         binding.titlebar.title.text = mParam1
         binding.titlebar.back.visibility = View.GONE
+
+
+        for (i in 0..20) {
+            list.add("条目:" + i)
+        }
+        menu = MyPopupWindow(context, list, object : MyPopupWindow.OnMenuItemClickListener {
+            override fun onItemClick(position: Int, src: String) {
+                Toast.makeText(context, position.toString() + "----" + src, Toast.LENGTH_SHORT).show()
+            }
+        })
+        menu!!.setOnDismissListener { Toast.makeText(context, "menu消失了", Toast.LENGTH_SHORT).show() }
+
+        menu!!.height = AppUtil.getScreenHeight(activity) - AppUtil.dip2Px(activity, 88F) - AppUtil.getNavigationBarHeight(activity) + AppUtil.getStatusBarHeight(activity) - 1
+
     }
 
     override fun initListener() {
         binding.submit.setOnClickListener {
-            activity.startActivity(Intent(activity, MyBlankDialog::class.java))
+            //            activity.startActivity(Intent(activity, MyBlankDialog::class.java))
+            menu!!.showAsDropDown(binding.submit, 0, 10)
+
         }
     }
 
