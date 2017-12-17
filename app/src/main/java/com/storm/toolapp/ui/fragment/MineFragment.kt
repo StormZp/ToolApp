@@ -1,14 +1,14 @@
 package com.storm.toolapp.ui.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.storm.tool.utils.RxBus
 import com.storm.toolapp.R
 import com.storm.toolapp.base.BaseFragment
 import com.storm.toolapp.databinding.FragmentMineBinding
-import com.storm.toolapp.dialog.MyBlankDialog
+import com.storm.toolapp.event.TestEvent
 
 /**
  * Created Storm
