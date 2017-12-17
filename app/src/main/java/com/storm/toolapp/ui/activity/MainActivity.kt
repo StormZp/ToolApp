@@ -3,17 +3,25 @@ package com.storm.toolapp.ui.activity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentPagerAdapter
+import android.widget.Toast
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
+import com.storm.tool.utils.RxBus
 import com.storm.toolapp.R
 import com.storm.toolapp.base.BaseActivity
 import com.storm.toolapp.databinding.ActivityMainBinding
+import com.storm.toolapp.event.TestEvent
 import com.storm.toolapp.ui.fragment.BlankVlayoutFragment
 import com.storm.toolapp.ui.fragment.MainFragment
 import com.storm.toolapp.ui.fragment.MineFragment
+import rx.Subscription
+import rx.functions.Action1
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    var testServable: Subscription? = null;
+
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +30,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun initData() {
+        /**
+         * 绑定事件
+         */
+
+        testServable = RxBus.getDefault().toObservable(TestEvent::class.java)
+                .subscribe(Action1<TestEvent> { t ->
+                    //
+                    Toast.makeText(context, t!!.name + "----" + t!!.age, Toast.LENGTH_SHORT).show()
+                }, //异常
+                        Action1<Throwable> { })
+
+
+
         binding.bottom.addItem(BottomNavigationItem(R.mipmap.backtop, "首页"))
                 .addItem(BottomNavigationItem(R.mipmap.backtop, "内容"))
                 .addItem(BottomNavigationItem(R.mipmap.backtop, "个人中心")).initialise()
@@ -44,6 +65,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initTitle() {
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if(!testServable!!.isUnsubscribed) {
+            testServable!!.unsubscribe()
+        }
     }
 
     override fun initListener() {
