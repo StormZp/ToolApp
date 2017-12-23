@@ -34,7 +34,11 @@ public class DragViewGroup extends LinearLayout {
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         //可以在这里确定这个viewGroup的：宽 = r-l.高 = b - t
+//        int w = (l - r) / 2;
+//        int h = (t-b) / 2;
+//        this.layout(screenWidth - w, screenHeight + h, screenWidth + w, screenHeight - h);
     }
+
 
     //拦截touch事件
     @Override
@@ -105,12 +109,12 @@ public class DragViewGroup extends LinearLayout {
                     isIntercept = false;
                 }
                 // 每次移动都要设置其layout，不然由于父布局可能嵌套listview，当父布局发生改变冲毁（如下拉刷新时）则移动的view会回到原来的位置
-                LayoutParams lpFeedback = new LayoutParams(
-                        LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                lpFeedback.leftMargin = DragViewGroup.this.getLeft();
-                lpFeedback.topMargin = DragViewGroup.this.getTop();
-                lpFeedback.setMargins(DragViewGroup.this.getLeft(), DragViewGroup.this.getTop(), 0, 0);
-                DragViewGroup.this.setLayoutParams(lpFeedback);
+//                LayoutParams lpFeedback = new LayoutParams(
+//                        LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//                lpFeedback.leftMargin = DragViewGroup.this.getLeft();
+//                lpFeedback.topMargin = DragViewGroup.this.getTop();
+//                lpFeedback.setMargins(DragViewGroup.this.getLeft(), DragViewGroup.this.getTop(), 0, 0);
+//                DragViewGroup.this.setLayoutParams(lpFeedback);
 //                LogUtil.error("ACTION_DOWN");
                 break;
             default:

@@ -1,6 +1,7 @@
 package com.storm.tool.utils;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Environment;
 import android.webkit.MimeTypeMap;
 
@@ -26,6 +27,87 @@ public class FileUtil {
      */
     public static boolean isSDCardExists() {
         return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+    }
+
+    /***
+     * 判断文件是否存在
+     * @param folderName
+     * @param fileName
+     * @return
+     */
+    public static File getEmptyFile(String folderName,String fileName) {
+        File folder = FileUtil.createFolders(folderName);
+        if (folder != null) {
+            if (folder.exists()) {
+                File file = new File(folder, fileName);
+                return file;
+            }
+        }
+        return null;
+    }
+
+    public static File getEmptyFile(String name) {
+        File folder = FileUtil.createFolders();
+        if (folder != null) {
+            if (folder.exists()) {
+                File file = new File(folder, name);
+                return file;
+            }
+        }
+        return null;
+    }
+
+
+    /**
+     * 获取存贮文件的文件夹路径
+     *
+     * @return
+     */
+    public static File createFolders() {
+        File baseDir;
+        if (Build.VERSION.SDK_INT < 8) {
+            baseDir = Environment.getExternalStorageDirectory();
+        } else {
+            //			baseDir = Environment
+            //					.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            baseDir = Environment.getExternalStorageDirectory();
+        }
+        if (baseDir == null)
+            return Environment.getExternalStorageDirectory();
+        File aviaryFolder = new File(Environment.getExternalStorageDirectory() + "/ephotos/xinlanedit");
+        if (aviaryFolder.exists())
+            return aviaryFolder;
+        if (aviaryFolder.isFile())
+            aviaryFolder.delete();
+        if (aviaryFolder.mkdirs())
+            return aviaryFolder;
+        return Environment.getExternalStorageDirectory();
+    }
+    /**
+     * 获取存贮文件的文件夹路径
+     *
+     * @return
+     * @param name
+     */
+    public static File createFolders(String name) {
+        File baseDir;
+        if (Build.VERSION.SDK_INT < 8) {
+            baseDir = Environment.getExternalStorageDirectory();
+        } else {
+//			baseDir = Environment
+//					.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            baseDir = Environment.getExternalStorageDirectory();
+        }
+        if (baseDir == null)
+            return Environment.getExternalStorageDirectory();
+        File aviaryFolder = new File(name);
+        if (aviaryFolder.exists())
+            return aviaryFolder;
+        if (aviaryFolder.isFile())
+            aviaryFolder.delete();
+        if (aviaryFolder.mkdirs())
+            return aviaryFolder;
+        return Environment.getExternalStorageDirectory();
     }
 
     /**

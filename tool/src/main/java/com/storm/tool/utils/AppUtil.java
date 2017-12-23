@@ -215,10 +215,11 @@ public class AppUtil {
      * @param editText 输入框
      * @param context  上下文
      */
-    public static void closeKeyboard(EditText editText, Context context) {
-        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+    public static void closeKeyboard(Context context) {
+        InputMethodManager imm =  (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if(imm != null) {imm.hideSoftInputFromWindow(((Activity)context).getWindow().getDecorView().getWindowToken(),
+                0);
+        }
     }
 
     /**

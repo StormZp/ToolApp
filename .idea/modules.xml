@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ToolApp1.iml" filepath="$PROJECT_DIR$/.idea/ToolApp1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ToolApp.iml" filepath="$PROJECT_DIR$/.idea/ToolApp.iml" />
+      <module fileurl="file://C:\Users\storm\AndroidStudioProjects\ToolApp\.idea\ToolApp1.iml" filepath="C:\Users\storm\AndroidStudioProjects\ToolApp\.idea\ToolApp1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\storm\AndroidStudioProjects\ToolApp\app\app.iml" filepath="C:\Users\storm\AndroidStudioProjects\ToolApp\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tool/tool.iml" filepath="$PROJECT_DIR$/tool/tool.iml" />
+      <module fileurl="file://C:\Users\storm\AndroidStudioProjects\ToolApp\tool\tool.iml" filepath="C:\Users\storm\AndroidStudioProjects\ToolApp\tool\tool.iml" />
     </modules>
   </component>
 </project>

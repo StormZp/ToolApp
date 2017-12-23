@@ -9,7 +9,11 @@ import android.widget.TextView;
 
 import com.meidp.tool.R;
 
-
+/**
+ * Created Storm
+ * Time    2017/12/20 9:35
+ * Message {菊花}
+ */
 public class CustomProgressDialog extends Dialog {
     private        Context              context              = null;
     private static CustomProgressDialog customProgressDialog = null;
